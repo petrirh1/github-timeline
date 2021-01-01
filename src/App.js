@@ -14,7 +14,6 @@ function App() {
 
 		try {
 			const data = await fetchData(user);
-			console.log('data', data);
 
 			if (data === 'Not Found') {
 				setNotFound(true);
