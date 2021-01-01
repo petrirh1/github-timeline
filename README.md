@@ -6,7 +6,7 @@ An application used to to create a visual timeline of users GitHub activity. Tim
 
 ###### `npm install`
 
-Downloads all neccessary dependencies.
+Installs all neccessary dependencies.
 
 ###### `npm start`
 
