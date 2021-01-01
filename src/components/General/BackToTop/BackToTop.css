@@ -1,0 +1,27 @@
+.backtotop__root {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.backtotop__root:hover .backtotop__icon {
+    color: var(--main-text-color);
+}
+
+.backtotop__icon {
+    font-size: 1.25rem;
+    color: #7F8792;
+    transition: color 0.35s;
+}
+
+@media (max-width: 600px) { 
+    .backtotop__root {
+        position: fixed;
+        right: 15px;
+    }
+}
