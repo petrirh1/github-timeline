@@ -5,7 +5,7 @@ const DEFAULT_PAGE = 1;
 export const fetchData = async (user, page = DEFAULT_PAGE) => {
 	try {
 		const res = await fetch(
-			`https://api.github.com/users/${user}/repos?type=all&sort=created&direction=desc&page=${page}&per_page=${PER_PAGE}`
+			`https://api.github.com/users/${user}/repos?type=public&sort=created&direction=desc&page=${page}&per_page=${PER_PAGE}`
 		);
 
 		let data = await res.json();
