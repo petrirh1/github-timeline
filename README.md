@@ -1,6 +1,6 @@
 ## GitHub Timeline
 
-An application used to to create a visual timeline of users GitHub activity. Timeline will only include public repos and forks.
+Generates a visual timeline of users GitHub activity. Timeline will only include public repos and forks.
 
 ### Available Scripts
 
