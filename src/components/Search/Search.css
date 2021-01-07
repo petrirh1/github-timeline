@@ -19,8 +19,8 @@
 }
 
 .search__input:focus {
-    border: 2px solid #575a5f;
-    box-shadow: 0px 0px 0px 5px#d9dee663;
+    border: 2px solid #3665DE;
+    box-shadow: 0px 0px 0px 5px #3666de15;
 }
 
 .search__input-btn {
