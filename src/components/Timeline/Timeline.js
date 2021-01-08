@@ -6,17 +6,19 @@ import { Button } from '../';
 import './Timeline.css';
 
 const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
+	const { repos, pagination } = data;
+
 	return (
 		<div className={'timeline__root'}>
-			{data?.repos?.map(repo => <TimelineItem key={repo.id} data={repo} />)}
-			{data?.pagination?.next && (
+			{repos?.map(repo => <TimelineItem key={repo.id} data={repo} />)}
+			{pagination?.next && (
 				<div className={'loadmore__root'}>
 					<Button fn={loadMore} text={'Load More'} isLoading={isLoading} hasError={hasError} />
 				</div>
 			)}
-			{!data.repos && !hasError && !notFound && <Hint />}
-			{!data.repos && hasError && <Error />}
-			{!data.repos && notFound && !hasError && <NotFound />}
+			{!repos && !hasError && !notFound && <Hint />}
+			{!repos && hasError && <Error />}
+			{!repos && notFound && !hasError && <NotFound />}
 		</div>
 	);
 };
