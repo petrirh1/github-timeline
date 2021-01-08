@@ -5,7 +5,7 @@ import { Hint, Error, NotFound } from '../States';
 import { Button } from '../';
 import './Timeline.css';
 
-const Timeline = ({ data, user, loadMore, isLoading, hasError, notFound }) => {
+const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
 	return (
 		<div className={'timeline__root'}>
 			{data?.repos?.map(repo => <TimelineItem key={repo.id} data={repo} />)}
@@ -16,7 +16,7 @@ const Timeline = ({ data, user, loadMore, isLoading, hasError, notFound }) => {
 			)}
 			{!data.repos && !hasError && !notFound && <Hint />}
 			{!data.repos && hasError && <Error />}
-			{!data.repos && notFound && !hasError && <NotFound user={user} />}
+			{!data.repos && notFound && !hasError && <NotFound />}
 		</div>
 	);
 };
