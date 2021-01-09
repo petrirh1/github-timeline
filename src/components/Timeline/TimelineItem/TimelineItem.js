@@ -50,6 +50,6 @@ const TimelineItem = ({ data }) => {
 
 export default TimelineItem;
 
-TimelineItem.prototypes = {
+TimelineItem.propTypes = {
 	data: PropTypes.object
 };

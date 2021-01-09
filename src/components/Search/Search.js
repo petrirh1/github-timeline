@@ -54,7 +54,7 @@ const Search = ({ getData, isLoading }) => {
 
 export default Search;
 
-Search.prototypes = {
+Search.propTypes = {
 	getData: PropTypes.func,
 	isLoading: PropTypes.bool
 };

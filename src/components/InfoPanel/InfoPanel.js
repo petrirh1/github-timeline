@@ -21,6 +21,6 @@ const InfoPanel = ({ data }) => {
 
 export default InfoPanel;
 
-InfoPanel.prototypes = {
+InfoPanel.propTypes = {
 	data: PropTypes.array
 };

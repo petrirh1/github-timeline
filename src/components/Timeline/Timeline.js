@@ -25,7 +25,7 @@ const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
 
 export default Timeline;
 
-Timeline.prototypes = {
+Timeline.propTypes = {
 	data: PropTypes.array,
 	loadMore: PropTypes.func,
 	isLoading: PropTypes.bool,

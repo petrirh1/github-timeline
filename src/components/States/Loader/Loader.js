@@ -14,6 +14,6 @@ const Loader = ({ isLoading }) => {
 
 export default Loader;
 
-Loader.prototypes = {
+Loader.propTypes = {
 	isLoading: PropTypes.bool
 };
