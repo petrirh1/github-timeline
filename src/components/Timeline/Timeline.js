@@ -8,6 +8,8 @@ import './Timeline.css';
 const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
 	const { repos, pagination } = data;
 
+	console.log(data);
+
 	return (
 		<div className={'timeline__root'}>
 			{repos?.map(repo => <TimelineItem key={repo.id} data={repo} />)}
@@ -26,7 +28,7 @@ const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
 export default Timeline;
 
 Timeline.propTypes = {
-	data: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+	data: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]),
 	loadMore: PropTypes.func,
 	isLoading: PropTypes.bool,
 	hasError: PropTypes.bool,
