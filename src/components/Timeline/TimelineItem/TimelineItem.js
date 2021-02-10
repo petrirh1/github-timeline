@@ -5,7 +5,7 @@ import './TimelineItem.css';
 const DATE_FORMAT = 'DD-MM-YYYY';
 
 const TimelineItem = ({ data }) => {
-	const { name, description, created_at, fork, html_url } = data;
+	const { name, description, created_at, fork, html_url, language } = data;
 
 	const formatDate = (date, format) => {
 		return dayjs(date).format(format);
@@ -40,9 +40,14 @@ const TimelineItem = ({ data }) => {
 					{name}
 				</a>
 				<h2 className='timelineitem__description'>{description}</h2>
-				<p title={DATE_FORMAT} className='timelineitem__date'>
-					{formatDate(created_at, DATE_FORMAT)}
-				</p>
+				<div className='timelineitem__info'>
+					<p title={DATE_FORMAT} className='timelineitem__date'>
+						{formatDate(created_at, DATE_FORMAT)}
+					</p>
+					<p title={'Primary language'} className='timelineitem__language'>
+						{language}
+					</p>
+				</div>
 			</div>
 		</div>
 	);

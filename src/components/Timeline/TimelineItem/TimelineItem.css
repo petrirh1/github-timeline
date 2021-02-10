@@ -85,6 +85,7 @@
 }
 
 .timelineitem__description {
+  width: fit-content;
   font-size: 0.9rem;
   line-height: 1.5;
   color: #434a50;
@@ -105,10 +106,24 @@
   display: none;
 }
 
-.timelineitem__date {
+.timelineitem__info {
+  display: flex;
+}
+
+.timelineitem__date,
+.timelineitem__language {
   font-size: 0.9rem;
   color: #7e8792;
   margin-bottom: 60px;
+}
+
+.timelineitem__language {
+  color: #434a50;
+}
+
+.timelineitem__language:not(:empty)::before {
+  content: '\2022';
+  margin:  0 8px;
 }
 
 .timelineitem__root:last-child .timelineitem__date {
