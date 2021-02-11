@@ -8,8 +8,6 @@ import './Timeline.css';
 const Timeline = ({ data, loadMore, isLoading, hasError, notFound }) => {
 	const { repos, pagination } = data;
 
-	console.log(data);
-
 	return (
 		<div className={'timeline__root'}>
 			{repos?.map(repo => <TimelineItem key={repo.id} data={repo} />)}
