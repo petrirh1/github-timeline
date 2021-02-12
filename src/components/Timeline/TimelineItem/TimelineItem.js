@@ -14,9 +14,9 @@ const TimelineItem = ({ data }) => {
 
 	const getIcon = isFork => {
 		if (isFork) {
-			return 'fas fa-code-branch timelineitem__dot-icon';
+			return 'fas fa-code-branch';
 		}
-		return 'fas fa-folder timelineitem__dot-icon';
+		return 'fas fa-folder';
 	};
 
 	return (
@@ -26,7 +26,7 @@ const TimelineItem = ({ data }) => {
 					<h2 title={YEAR_FORMAT} className={'timelineitem__label'}>
 						{formatDate(created_at, YEAR_FORMAT)}
 					</h2>
-					<i className={getIcon(fork)}></i>
+					<i className={`${getIcon(fork)} timelineitem__dot-icon`}></i>
 				</div>
 				<div className='timelineitem__connector'></div>
 			</div>
