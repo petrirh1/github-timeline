@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import './TimelineItem.css';
 const DATE_FORMAT = 'DD-MM-YYYY';
+const YEAR_FORMAT = 'YYYY';
 
 const TimelineItem = ({ data }) => {
 	const { name, description, created_at, fork, html_url, language } = data;
 
 	const formatDate = (date, format) => {
 		return dayjs(date).format(format);
-	};
-
-	const getLabel = date => {
-		return dayjs(date).format('YYYY');
 	};
 
 	const getIcon = isFork => {
@@ -26,7 +23,9 @@ const TimelineItem = ({ data }) => {
 		<div className='timelineitem__root'>
 			<div className='timelineitem__separator'>
 				<div title={fork ? 'Fork' : 'Repository'} className='timelineitem__dot'>
-					<h2 className={'timelineitem__label'}>{getLabel(created_at)}</h2>
+					<h2 title={YEAR_FORMAT} className={'timelineitem__label'}>
+						{formatDate(created_at, YEAR_FORMAT)}
+					</h2>
 					{getIcon(fork)}
 				</div>
 				<div className='timelineitem__connector'></div>
