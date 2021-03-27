@@ -1,6 +1,6 @@
 ## GitHub Timeline
 
-Generates a visual timeline of users public GitHub activity. Timeline includes public repos and forks.
+Generates a visual timeline of users GitHub activity. Timeline includes public repos and forks.
 
 ### Available Scripts
 
